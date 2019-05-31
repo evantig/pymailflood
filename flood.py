@@ -11,16 +11,18 @@ s = ''
 sendfrom = ''
 mails = 0
 error = ''
-
-with open('config.json') as config_file:
-    try:
-        data = json.load(config_file)
-        usrs = data['accounts']['usrs']
-        pwds = data['accounts']['pwds']
-        if len(usrs) != len(pwds):
-            error = 'Error: Length of user list does match length of password list'
-    except:
-        error = 'Error: Invalid JSON file'
+try:
+    with open('config.json') as config_file:
+        try:
+            data = json.load(config_file)
+            usrs = data['accounts']['usrs']
+            pwds = data['accounts']['pwds']
+            if len(usrs) != len(pwds):
+                error = 'Error: Length of user list does match length of password list'
+        except:
+            error = 'Error: Invalid JSON file'
+except:
+    error = 'Error: Could not open JSON file'
 
 def update():
     global message
