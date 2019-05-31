@@ -1,0 +1,8 @@
+{
+    "accounts":{
+        "c1": "Put Gmail users and passwords here:",
+        "c2": "Once you are done, rename this file to config.json.",
+        "usrs":["user1@gmail.com", "user2@gmail.com"],
+        "pwds":["secretpwd1", "secretpwd2"]
+    }
+}
