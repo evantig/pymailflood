@@ -1,12 +1,12 @@
 # pymailflooder
 ---
 ## Setup
-- Clone or download the repository
-- Extract the file (if needed)
-- Rename "config-example.json" to "config.json"
-- Add valid usernames and passwords to the config
+* Clone or download the repository
+* Extract the file (if needed)
+* Rename "config-example.json" to "config.json"
+* Add valid usernames and passwords to the config
 
-Valid syntax:
+Valid config syntax:
 ``` json
 {
     "accounts":{
