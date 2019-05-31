@@ -11,18 +11,6 @@ s = ''
 sendfrom = ''
 mails = 0
 error = ''
-try:
-    with open('config.json') as config_file:
-        try:
-            data = json.load(config_file)
-            usrs = data['accounts']['usrs']
-            pwds = data['accounts']['pwds']
-            if len(usrs) != len(pwds):
-                error = 'Error: Length of user list does match length of password list'
-        except:
-            error = 'Error: Invalid JSON file'
-except:
-    error = 'Error: Could not open JSON file'
 
 def update():
     global message
@@ -41,6 +29,19 @@ def login(uname, pwd, svr = 'smtp.gmail.com', port = 587):
     s.ehlo()
     s.starttls()
     s.login(uname, pwd)
+
+try:
+    with open('config.json') as config_file:
+        try:
+            data = json.load(config_file)
+            usrs = data['accounts']['usrs']
+            pwds = data['accounts']['pwds']
+            if len(usrs) != len(pwds):
+                error = 'Error: Length of user list does match length of password list'
+        except:
+            error = 'Error: Invalid JSON file'
+except:
+    error = 'Error: Could not open JSON file'
 
 if error == '':
 
