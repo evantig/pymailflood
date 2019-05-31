@@ -6,6 +6,9 @@
 * Rename "config-example.json" to "config.json"
 * Add valid usernames and passwords to the config
 
+```
+```
+
 Valid config syntax:
 ``` json
 {
