@@ -1,5 +1,4 @@
 # pymailflooder
----
 ## Setup
 * Clone or download the repository
 * Extract the file (if needed)
