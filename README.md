@@ -5,6 +5,7 @@
 - Extract the file (if needed)
 - Rename "config-example.json" to "config.json"
 - Add valid usernames and passwords to the config
+
 Valid syntax:
 ``` json
 {
